@@ -38,48 +38,6 @@ const log = message => {
 client.on('ready', () => {
   console.log("bot hazır")
   
-  const lib = require('lib')({token: ayarlar.token});
-  
-let activitynameslist = [
-  `/help - Meme Central`,
-  `DM me for support`,
-  `I am a robot`,
-]
-let ActivityChoice = Math.floor(Math.random() * activitynameslist.length);
-let activity = activitynameslist[ActivityChoice];
-
-// Do not add some random Things from this part. Discord has limited activity type and status.
-// ONLINE, DND, IDLE.
-// Activity Type List 
-let activitytypelist = [
-  `STREAMING`,
-  `GAME`,
-  `COMPETING`
-]
-
-let ActypeChoice = Math.floor(Math.random() * activitytypelist.length);
-let activitytype = activitytypelist[ActypeChoice];
-// End of Activity Type
-//Start of status
-let status = [
-  'ONLINE',
-  `DND`,
-  `IDLE`
-]
-let statusChoice = Math.floor(Math.random() * status.length);
-let statustype = status[statusChoice];
-
-let statusParams = {
-  activity_name: `${activity}`,
-  activity_type: `${activitytype}`,
-  status: `${statustype}`
-};
-
-if (activitytype === 'STREAMING') {
-  statusParams.url = 'https://twitch.tv/YourBudTevin';
-}
-  lib.discord.users['@0.1.1'].me.status.update(statusParams);
-});
 
 //-----------------------DESTEK AÇMAK--------------------------\\
 //-----------------------DESTEK AÇMAK--------------------------\\
