@@ -37,8 +37,7 @@ const log = message => {
 
 client.on('ready', () => {
   console.log("bot hazır")
-  
-
+});
 //-----------------------DESTEK AÇMAK--------------------------\\
 //-----------------------DESTEK AÇMAK--------------------------\\
 
